@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhotoComparer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PhotoComparer" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <MenuItem Header="File">
+                <MenuItem Header="Open Folder" />
+                <MenuItem Header="Close" />
+            </MenuItem>
+        </Menu>
+        <Image Grid.Row="1" Grid.Column="0" />
+        <Image Grid.Row="1" Grid.Column="2" />
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Grid.Row="2" Grid.Column="0" Content="Delete photo" />
+        <Button Grid.Row="2" Grid.Column="2" Content="Next" />
     </Grid>
 </Window>
